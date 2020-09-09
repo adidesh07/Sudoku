@@ -6,6 +6,6 @@ If the input is correct, the number gets placed in the cell otherwise number get
 
 ![](Images/Game.JPG)
 
-###How to play
+##How to play
 To play this game, you need to have Pygame installed.
 Download the code and run the file game.py to start playing.
