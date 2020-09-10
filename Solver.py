@@ -1,5 +1,3 @@
-import random
-
 def solve(board):
 
     find = find_empty(board)
