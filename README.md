@@ -5,6 +5,8 @@ User can select a cell and enter the number of their choice. Initially the numbe
 If the input is correct, the number gets placed in the cell otherwise number gets erased and an 'Incorrect' message is shown.
 To get the solution press Spacebar.
 
+Icons used from www.flaticon.com
+
 ![](Images/Game.JPG)
 
 User can visualise how the backtracking algorithm solves the sudoku by clicking the visualise solution button.
