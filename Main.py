@@ -1,6 +1,6 @@
 from GUI import *
 from Visualise import visualise
-from Problem_set import random_question
+from Problem_set import select_question
 from PIL import Image
 import time
 import pygame
@@ -16,7 +16,7 @@ Icon_img = pygame.image.fromstring(Icon.tobytes(), Icon.size, Icon.mode)
 
 def main():
     run = True
-    question = random_question()
+    question = select_question()
     bo = Board(WIN, 9, 9, board_SIZE, board_SIZE, WIDTH, question)
     solved = False
     key = None
@@ -68,13 +68,9 @@ def main():
         for event in pygame.event.get():
             pos = pygame.mouse.get_pos()
             if event.type == pygame.QUIT:
-                run = False
                 return False
 
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
-                    solve(bo.question)
-                    solved = True
                 if event.key == pygame.K_1:
                     key = 1
                 if event.key == pygame.K_2:
@@ -113,8 +109,12 @@ def main():
                 if VISUALISE.isOver(pos):
                     visualise(bo)
                 if NEW_GAME.isOver(pos):
-                    run = False
                     return True
+                if GET_SOLUTION.isOver(pos):
+                    solve(bo.question)
+                    solved=True
+                if SUDOKU_SOLVER.isOver(pos):
+                    pass
 
             if event.type == pygame.MOUSEMOTION:
                 if VISUALISE.isOver(pos):
