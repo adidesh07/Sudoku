@@ -10,7 +10,7 @@ Icons used from www.flaticon.com
 ![](Images/Game.JPG)
 
 User can visualise how the backtracking algorithm solves the sudoku by clicking the visualise solution button.
-Note that the visualisation is slowed down for the ease of the viewer. The actual backtracking process gets completed in a matter or milliseconds.
+Note that the visualisation is slowed down for the ease of the viewer. The actual backtracking process gets completed in a matter of milliseconds.
 
 
 ### How to play:
